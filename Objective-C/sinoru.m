@@ -20,7 +20,6 @@ int main(int argc, const char * argv[]) {
             while (status >= 0) {
                 status = [outputStream write:data.bytes maxLength:1];
             }
-            NSLog(@"%@", outputStream.streamError);
         }
     }
     return 0;
