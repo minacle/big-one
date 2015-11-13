@@ -3,7 +3,11 @@
 
 let fs = require('fs')
 
-var bigStream = fs.createWriteStream('./big')
-var nullStream = fs.createReadStream('/dev/zero')
+try {
 
-nullStream.pipe(bigStream)
+  var bigStream = fs.createWriteStream('./big')
+  var nullStream = fs.createReadStream('/dev/zero')
+
+  nullStream.pipe(bigStream)
+
+} catch(e) { }
